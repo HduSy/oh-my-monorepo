@@ -1,0 +1,17 @@
+{
+  "name": "st-monorepo",
+  "version": "1.0.0",
+  "description": "A monorepo try demo project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "HduSy",
+  "license": "ISC",
+  "devDependencies": {
+    "@nestjs/cli": "^9.0.0",
+    "typescript": "^4.7.4"
+  }
+}
