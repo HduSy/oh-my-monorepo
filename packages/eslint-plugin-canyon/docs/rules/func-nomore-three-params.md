@@ -1,4 +1,4 @@
-# setTimeout 第二个参数必须为整数 (settimeout-correct-number)
+# Number of function&#39;s params shouldn&#39;t be 3 more. (func-nomore-three-params)
 
 Please describe the origin of the rule here.
 
@@ -10,9 +10,7 @@ Examples of **incorrect** code for this rule:
 
 ```js
 
-setTimeout(()=>console.log(0))
-setTimeout(()=>console.log(0), 0)
-setTimeout(()=>console.log(0), 1)
+function test(a, b, c) {}
 
 ```
 
@@ -20,8 +18,7 @@ Examples of **correct** code for this rule:
 
 ```js
 
-setTimeout(()=>console.log(0), -1.1)
-setTimeout(()=>console.log(0), 1.1)
+function test(a, b, c, d) {}
 
 ```
 

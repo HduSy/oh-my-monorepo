@@ -1,5 +1,3 @@
-"use strict";
-
 module.exports = {
   root: true,
   extends: [
@@ -9,6 +7,7 @@ module.exports = {
   ],
   env: {
     node: true,
+    commonjs: true,
   },
   overrides: [
     {
@@ -16,4 +15,8 @@ module.exports = {
       env: { mocha: true },
     },
   ],
+  globals: {
+    module: 'readonly',
+    require: 'readonly',
+  }
 };

@@ -19,5 +19,8 @@
     "overrides": {
       "terser@>=5.0.0 <5.14.2": ">=5.14.2"
     }
+  },
+  "dependencies": {
+    "@types/node": "^16.0.0"
   }
 }
