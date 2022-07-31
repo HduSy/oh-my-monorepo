@@ -104,6 +104,27 @@ importers:
       eslint-plugin-vue: 9.3.0_eslint@8.20.0
       mocha: 10.0.0
 
+  packages/eslint-plugin-canyon:
+    specifiers:
+      '@types/node': ^16.0.0
+      eslint: ^8.19.0
+      eslint-plugin-eslint-plugin: ^5.0.0
+      eslint-plugin-node: ^11.1.0
+      eslint-plugin-vue: ^9.3.0
+      mocha: ^10.0.0
+      requireindex: ^1.2.0
+      vue-eslint-parser: ^9.0.3
+    dependencies:
+      requireindex: 1.2.0
+      vue-eslint-parser: registry.npmmirror.com/vue-eslint-parser/9.0.3_eslint@8.19.0
+    devDependencies:
+      '@types/node': registry.npmmirror.com/@types/node/16.11.43
+      eslint: 8.19.0
+      eslint-plugin-eslint-plugin: 5.0.1_eslint@8.19.0
+      eslint-plugin-node: 11.1.0_eslint@8.19.0
+      eslint-plugin-vue: registry.npmmirror.com/eslint-plugin-vue/9.3.0_eslint@8.19.0
+      mocha: 10.0.0
+
   packages/server:
     specifiers:
       '@nestjs/cli': ^9.0.0
@@ -1462,6 +1483,10 @@ packages:
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
+    dev: true
+
+  /@types/node/18.0.6:
+    resolution: {integrity: sha512-/xUq6H2aQm261exT6iZTMifUySEt4GR5KX8eYyY+C4MSNPqSh9oNIP7tz2GLKTlFaiBbgZNxffoR3CVRG+cljw==}
     dev: true
 
   /@types/parse-json/4.0.0:
@@ -5513,6 +5538,12 @@ packages:
 
   /mute-stream/0.0.8:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
+
+  /nanoid/3.3.3:
+    resolution: {integrity: sha512-p1sjXuopFs0xg+fPASzQ28agW1oHD7xDsd9Xkf3T15H3c/cifrFHVwrh74PdoklAPi+i7MdRsE47vm2r6JoB+w==}
+    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+    dev: true
 
   /nanoid/3.3.3:
     resolution: {integrity: sha512-p1sjXuopFs0xg+fPASzQ28agW1oHD7xDsd9Xkf3T15H3c/cifrFHVwrh74PdoklAPi+i7MdRsE47vm2r6JoB+w==}

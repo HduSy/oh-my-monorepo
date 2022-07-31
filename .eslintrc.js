@@ -25,6 +25,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/ban-types': [
       'off',
       {
@@ -33,10 +34,6 @@ module.exports = {
           Function: false,
         },
         extendDefaults: true,
-        rules: {
-          'eslint-plugin/prefer-message-ids': 'off',
-          'eslint-plugin/require-meta-schema': 'off',
-        },
       },
     ],
   },
@@ -48,8 +45,8 @@ module.exports = {
     {
       files: ['packages/eslint-plugin-canyon/lib/rules/*.js'],
       rules: {
-        'eslint-plugin/prefer-message-ids': 0,
-        'eslint-plugin/require-meta-schema': 0,
+        'eslint-plugin/prefer-message-ids': 'off',
+        'eslint-plugin/require-meta-schema': 'off',
       },
     },
   ],

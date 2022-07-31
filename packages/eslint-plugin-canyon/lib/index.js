@@ -1,8 +1,8 @@
 'use strict'
 
-import requireIndex from 'requireindex'
+const requireIndex = require('requireindex')
 
-export const configs = {
+module.exports = {
   ees6: {
     plugins: ['canyon'],
     env: ['es6'],
@@ -10,5 +10,5 @@ export const configs = {
       'canyon/func-nomore-three-params': 'error',
     },
   },
+  rules: requireIndex(__dirname + '/rules'),
 }
-export const rules = requireIndex(__dirname + '/rules')

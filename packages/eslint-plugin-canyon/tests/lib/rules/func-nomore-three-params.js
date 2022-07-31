@@ -8,8 +8,8 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-import { RuleTester } from 'eslint'
-import rule from '../../../lib/rules/func-nomore-three-params'
+const { RuleTester } = require('eslint')
+const rule = require('../../../lib/rules/func-nomore-three-params')
 
 //------------------------------------------------------------------------------
 // Tests

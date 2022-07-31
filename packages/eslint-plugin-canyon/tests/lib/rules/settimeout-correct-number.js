@@ -8,8 +8,8 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-import { RuleTester } from 'eslint'
-import rule from '../../../lib/rules/settimeout-correct-number'
+const { RuleTester } = require('eslint')
+const rule = require('../../../lib/rules/settimeout-correct-number')
 
 //------------------------------------------------------------------------------
 // Tests
