@@ -1,5 +1,5 @@
 {
-  "name": "@packages/utils",
+  "name": "@st/utils",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",

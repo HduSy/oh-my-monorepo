@@ -1,0 +1,35 @@
+{
+  "name": "@st/cli",
+  "version": "1.0.0",
+  "description": "A cli develop explore journey.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "songyao",
+  "license": "ISC",
+  "dependencies": {
+    "@types/adm-zip": "^0.5.0",
+    "@types/inquirer": "^8.2.1",
+    "@types/jsonfile": "^6.1.0",
+    "@types/validate-npm-package-name": "^4.0.0",
+    "adm-zip": "^0.5.9",
+    "chalk": "^5.0.1",
+    "commander": "^9.4.0",
+    "del": "^7.0.0",
+    "download-git-repo": "^3.0.2",
+    "fast-glob": "^3.2.11",
+    "inquirer": "^9.0.2",
+    "inquirer-autocomplete-prompt": "^2.0.0",
+    "jsonfile": "^6.1.0",
+    "md5-file": "^5.0.0",
+    "open": "^8.4.0",
+    "ora": "^6.1.2",
+    "rimraf": "^3.0.2",
+    "superagent": "^8.0.0",
+    "validate-npm-package-name": "^4.0.0"
+  }
+}

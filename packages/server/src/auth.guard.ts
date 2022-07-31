@@ -8,7 +8,7 @@ export class AuthGuard implements CanActivate {
     return this.validateRequest(request)
   }
   validateRequest(req) {
-  //  守卫处理逻辑
+    //  守卫处理逻辑
     return true
   }
 }

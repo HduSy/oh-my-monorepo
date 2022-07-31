@@ -14,16 +14,16 @@ import {
   UseGuards,
   UseInterceptors,
   UsePipes,
-} from '@nestjs/common';
-import { CreateCatDto, CreateCatSchema } from './dto/create-cats.dto';
-import { CatsService } from './cats.service';
-import { Cat } from './interfaces/cats.interface';
-import { HttpExceptionFiltter } from '../http-exception.filtter';
-import { JoiValidatePipe } from '../joiValidate.pipe';
-import { ParseIntPipe } from '../parseInt.pipe';
-import { AuthGuard } from '../auth.guard';
-import { Roles } from '../roles.decorator';
-import { LoggingInterceptor } from '../logging.interceptor';
+} from '@nestjs/common'
+import { AuthGuard } from '../auth.guard'
+import { HttpExceptionFiltter } from '../http-exception.filtter'
+import { JoiValidatePipe } from '../joiValidate.pipe'
+import { LoggingInterceptor } from '../logging.interceptor'
+import { ParseIntPipe } from '../parseInt.pipe'
+import { Roles } from '../roles.decorator'
+import { CatsService } from './cats.service'
+import { CreateCatDto, CreateCatSchema } from './dto/create-cats.dto'
+import { Cat } from './interfaces/cats.interface'
 
 @Controller('cats')
 @UseGuards(AuthGuard)
@@ -33,7 +33,7 @@ export class CatsController {
   @Get() // 该装饰器创建了一个路由路径端点将指定请求映射到该处理程序
   @HttpCode(204)
   async findAll(): Promise<Cat[]> {
-    return this.catsService.findAll();
+    return this.catsService.findAll()
   }
   @Post() // payload
   @Header('Cache-Control', 'none')
@@ -41,7 +41,7 @@ export class CatsController {
   @UsePipes(new JoiValidatePipe(CreateCatSchema))
   @Roles('admin')
   async create(@Body() createCatDto: CreateCatDto) {
-    return this.catsService.create(createCatDto);
+    return this.catsService.create(createCatDto)
   }
   @Get('/error')
   testError() {
@@ -52,15 +52,15 @@ export class CatsController {
         message: 'This is a custom message.',
       },
       HttpStatus.FORBIDDEN,
-    );
+    )
   }
   // 路由参数
   @Get(':id')
   findOne(@Param('id', ParseIntPipe) id: string) {
-    return `This action returns a #${id} cat`;
+    return `This action returns a #${id} cat`
   }
   @Delete(':id')
   remove(@Param('id') id) {
-    return `This action removes a #${id} cat`;
+    return `This action removes a #${id} cat`
   }
 }
