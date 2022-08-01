@@ -2,46 +2,49 @@ module.exports = {
   // 可选类型
   types: [
     {
-      value: ':sparkles: feat',
-      name: '✨ feat: 新功能',
+      value: ':tada: feat',
+      name: '🎉 feat|新功能',
     },
     {
       value: ':bug: fix',
-      name: '🐛 fix: 修复',
+      name: '🐛 fix|修复',
+    },
+    {
+      value: ':building_construction: wip',
+      name: '🏗️ wip|开发中',
+    },
+    {
+      value: ':wrench: chore',
+      name: '🔧 chore|优化',
     },
     {
       value: ':memo: docs',
-      name: '📝 docs: 文档变更',
+      name: '📝 docs|文档变更',
     },
     {
-      value: ':lipstick: style',
-
-      name: '💄 style: 代码格式（不影响代码运行的变动）',
+      value: ':art: style',
+      name: '🎨 style|代码格式(不影响代码运行的变动)',
     },
     {
       value: ':recycle: refactor',
 
-      name: '♻️  refactor: 重构（既不增加feature，也不是修复bug）',
+      name: '♻️ refactor|重构(既不增加feature,也不是修复bug)',
     },
     {
-      value: ':zap: perf',
-      name: '⚡️ perf: 性能优化',
+      value: ':rocket: perf',
+      name: '🚀 perf|性能优化',
     },
     {
-      value: ':white_check_mark: test',
-      name: '✅ test: 增加测试',
-    },
-    {
-      value: ':wrench: chore',
-      name: '🔧 chore: 构建过程或辅助工具的变动',
+      value: ':construction: test',
+      name: '🚧 test|测试',
     },
     {
       value: ':rewind: revert',
-      name: '⏪ revert:     回退',
+      name: '⏪ revert|回退',
     },
     {
-      value: ':rocket: build',
-      name: '🚀 build:     打包',
+      value: ':package: build',
+      name: '📦️ build|打包',
     },
   ],
 
