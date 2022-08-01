@@ -4,6 +4,12 @@
   "description": "A cli develop explore journey.",
   "main": "index.js",
   "scripts": {
+    "prebuild": "rimraf ./lib",
+    "build": "tsc --outDir ./lib",
+    "watch": "tsc -w",
+    "commit": "cz",
+    "release:beta": "standard-version --prerelease beta",
+    "prepublishOnly": "npm run build",
     "release": "standard-version --preset gitmoji-config",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
