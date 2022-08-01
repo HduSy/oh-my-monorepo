@@ -14,8 +14,8 @@ module.exports = {
       name: '🏗️ wip|开发中',
     },
     {
-      value: ':wrench: chore',
-      name: '🔧 chore|优化',
+      value: ':zap: chore',
+      name: '⚡️ chore|优化',
     },
     {
       value: ':memo: docs',
