@@ -47,17 +47,15 @@ module.exports = {
       name: '📦️ build|打包',
     },
   ],
-
   // 步骤
-
   messages: {
-    type: '请选择提交的类型：',
-    customScope: '情输入修改的范围（可选）',
-    subject: '请简要描述提交（必填）',
-    body: '请输入详细描述（可选）',
-    footer: '请输入要关闭的issuse（可选）',
-    confirmCommit: '确认要使用以上信息提交？（y/n）',
+    type: '请选择提交的类型:',
+    customScope: '请输入修改的范围(可选):',
+    subject: '请简要描述提交(必填):',
+    body: '请输入详细描述(可选):',
+    footer: '请输入要关闭的issuse(可选):',
+    confirmCommit: '确认要使用以上信息提交?(y/n)',
   },
-  // 默认长度72
+  // 默认长度限制72
   subjectLimit: 72,
 }
