@@ -10,7 +10,7 @@
     "cli"
   ],
   "author": "songyao",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@types/adm-zip": "^0.5.0",
     "@types/inquirer": "^8.2.1",

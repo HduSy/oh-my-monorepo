@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "ESNEXT",
+    "allowJs": false,
+    "module": "CommonJS",
+    "jsx": "preserve",
+    "declaration": true,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "alwaysStrict": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["ES6"],
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "strict": true,
+    "useUnknownInCatchVariables": false
+  },
+}

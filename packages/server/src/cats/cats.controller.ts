@@ -56,7 +56,7 @@ export class CatsController {
   }
   // 路由参数
   @Get(':id')
-  findOne(@Param('id', ParseIntPipe) id: string) {
+  async findOneById(@Param('id', ParseIntPipe) id: string) {
     return `This action returns a #${id} cat`
   }
   @Delete(':id')
