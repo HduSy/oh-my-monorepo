@@ -13,6 +13,7 @@
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
   "scripts": {
+    "release": "standard-version --preset gitmoji-config",
     "test": "mocha tests --recursive"
   },
   "dependencies": {

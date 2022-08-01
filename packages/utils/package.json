@@ -5,6 +5,7 @@
   "main": "index.ts",
   "license": "MIT",
   "scripts": {
+    "release": "standard-version --preset gitmoji-config",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

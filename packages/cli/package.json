@@ -4,6 +4,7 @@
   "description": "A cli develop explore journey.",
   "main": "index.js",
   "scripts": {
+    "release": "standard-version --preset gitmoji-config",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -22,7 +23,7 @@
     "del": "^7.0.0",
     "download-git-repo": "^3.0.2",
     "fast-glob": "^3.2.11",
-    "inquirer": "^9.0.2",
+    "inquirer": "^8.0.0",
     "inquirer-autocomplete-prompt": "^2.0.0",
     "jsonfile": "^6.1.0",
     "md5-file": "^5.0.0",
