@@ -57,6 +57,7 @@ export const spinner = {
   },
   stop() {
     // Stop and clear the spinner. Returns the instance.
-    spinnerInstance.stop()
+    spinnerInstance && spinnerInstance.stop()
+    spinnerInstance = null
   },
 }

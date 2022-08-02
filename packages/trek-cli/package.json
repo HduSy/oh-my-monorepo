@@ -1,8 +1,23 @@
 {
-  "name": "@st/cli",
-  "version": "1.0.0",
+  "name": "@st-monorepo/trek-cli",
+  "version": "0.0.1",
   "description": "A cli develop explore journey.",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "type": "commonjs",
+  "author": "songyao",
+  "license": "MIT",
+  "keywords": [
+    "cli"
+  ],
+  "files": [
+    "bin",
+    "lib",
+    "package.json",
+    "README.md"
+  ],
+  "bin": {
+    "trek": "./bin/trek"
+  },
   "scripts": {
     "prebuild": "rimraf ./lib",
     "build": "tsc --outDir ./lib",
@@ -13,12 +28,8 @@
     "release": "standard-version --preset gitmoji-config",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "cli"
-  ],
-  "author": "songyao",
-  "license": "MIT",
   "dependencies": {
+    "@st-monorepo/trek-cli": "^0.0.1",
     "@types/adm-zip": "^0.5.0",
     "@types/inquirer": "^8.2.1",
     "@types/jsonfile": "^6.1.0",

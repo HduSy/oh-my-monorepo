@@ -1,5 +1,5 @@
 {
-  "name": "@st/utils",
+  "name": "@st-monorepo/utils",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
