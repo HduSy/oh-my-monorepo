@@ -35,7 +35,7 @@
     "@types/jsonfile": "^6.1.0",
     "@types/validate-npm-package-name": "^4.0.0",
     "adm-zip": "^0.5.9",
-    "chalk": "^5.0.1",
+    "chalk": "^4.1.0",
     "commander": "^9.4.0",
     "del": "^7.0.0",
     "download-git-repo": "^3.0.2",
@@ -45,7 +45,7 @@
     "jsonfile": "^6.1.0",
     "md5-file": "^5.0.0",
     "open": "^8.4.0",
-    "ora": "^6.1.2",
+    "ora": "^5.1.0",
     "rimraf": "^3.0.2",
     "superagent": "^8.0.0",
     "validate-npm-package-name": "^4.0.0"

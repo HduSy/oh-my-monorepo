@@ -1,6 +1,10 @@
 // 命令行个性化打印
-import chalk from 'chalk'
+import * as chalk from 'chalk'
 import ora, { Ora } from 'ora'
+
+export const paramError = (fieldName: string, ...msgs: string[]) => {
+  console.log(`${chalk.bgYellowBright('参数格式错误')} 字段<${fieldName}>`, ...msgs)
+}
 
 export const logger = {
   info(msg: string): void {
@@ -15,10 +19,6 @@ export const logger = {
   error(msg: string | Error): void {
     console.log(`${chalk.red.bold('[ERROR]')}`, msg)
   },
-}
-
-export const paramError = (fieldName: string, ...msgs: string[]) => {
-  console.log(`${chalk.bgYellowBright('参数格式错误')} 字段<${fieldName}>`, ...msgs)
 }
 
 let spinnerInstance: Ora | null

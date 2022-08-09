@@ -1,3 +1,6 @@
+import splitString from './commands/splitString'
+import { logger } from './log'
+
 // 入口主文件
 const { Command } = require('commander')
 
@@ -10,12 +13,16 @@ CLI.name('trek').description('A CLI to some JavaScript utilities').version(pkgve
 CLI.command('split')
   .description('Split a string into substrings and display as an array')
   .argument('<string>', 'string to split')
-  .option('--first', 'display just the first substring')
-  .option('-n, --num <num>', 'display num of substring', undefined)
   .option('-s, --separator <char>', 'separator character', ',')
-  .action((str: string, options: any) => {
-    const limit = options.first ? 1 : options.num ? options.num : undefined
-    console.log(str.split(options.separator, limit))
+  .option('-n, --num <num>', 'display num of substring', undefined)
+  .option('--first', 'display just the first substring')
+  .action((str: string, opts: any) => {
+    if (!str) {
+      logger.warn('目标字符串不可为空')
+      process.exit(-1)
+    }
+    const result = splitString(str, opts.separator, opts.num)
+    console.log(result)
   })
 
 CLI.parse()
