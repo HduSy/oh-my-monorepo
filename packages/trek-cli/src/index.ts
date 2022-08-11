@@ -1,16 +1,19 @@
+// 入口主文件
+import { Command } from 'commander'
+import addUserInfo from './commands/addUserInfo'
 import splitString from './commands/splitString'
+import { setEnv } from './config'
 import { logger } from './log'
 
-// 入口主文件
-const { Command } = require('commander')
-
+const program = new Command()
 const fs = require('fs')
 const pkgversion = JSON.parse(fs.readFileSync('./package.json', 'utf8')).version
 
-const CLI = new Command()
-CLI.name('trek').description('A CLI to some JavaScript utilities').version(pkgversion)
+// const CLI = new Command()
+program.name('trek').description('A CLI to some JavaScript utilities').version(pkgversion)
 
-CLI.command('split')
+program
+  .command('split')
   .description('Split a string into substrings and display as an array')
   .argument('<string>', 'string to split')
   .option('-s, --separator <char>', 'separator character', ',')
@@ -25,4 +28,17 @@ CLI.command('split')
     console.log(result)
   })
 
-CLI.parse()
+program
+  .command('adduser')
+  .description('添加用户信息')
+  .option('-e, --env <env>', '选择特定环境, 如dev, uat, pre 或 prod', 'prod')
+  .action(options => {
+    console.log(options)
+
+    if (options.env) {
+      setEnv(options.env)
+    }
+    addUserInfo()
+  })
+
+program.parse()
