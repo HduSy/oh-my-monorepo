@@ -1,6 +1,8 @@
 // 入口主文件
 import { Command } from 'commander'
+import process from 'process'
 import addUserInfo from './commands/addUserInfo'
+import findItem from './commands/findItem'
 import splitString from './commands/splitString'
 import { setEnv } from './config'
 import { logger } from './log'
@@ -37,6 +39,23 @@ program
       setEnv(options.env)
     }
     addUserInfo()
+  })
+program
+  .command('find')
+  .description('查找数组内指定元素')
+  .argument('<target>', '待查找元素')
+  .argument('<arr...>', '目标数组')
+  .action((target: any, arr: any[]) => {
+    if (arr.length === 0) {
+      logger.warn('目标数组不可为空')
+      process.exit(-1)
+    }
+    if (!target) {
+      logger.warn('待查找元素不可为空')
+      process.exit(-1)
+    }
+    const result = findItem(arr, target)
+    console.log(result)
   })
 
 program.parse()
