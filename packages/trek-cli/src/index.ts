@@ -33,8 +33,6 @@ program
   .description('添加用户信息')
   .option('-e, --env <env>', '选择特定环境, 如dev, uat, pre 或 prod', 'prod')
   .action(options => {
-    console.log(options)
-
     if (options.env) {
       setEnv(options.env)
     }

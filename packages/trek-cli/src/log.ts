@@ -1,6 +1,7 @@
 // 命令行个性化打印
 import * as chalk from 'chalk'
-import ora, { Ora } from 'ora'
+import * as ora from 'ora'
+import { Ora } from 'ora'
 
 export const paramError = (fieldName: string, ...msgs: string[]) => {
   console.log(`${chalk.bgYellowBright('参数格式错误')} 字段<${fieldName}>`, ...msgs)
