@@ -1,6 +1,7 @@
 {
   "name": "@st-monorepo/specialized-vue3",
   "version": "0.0.0",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -38,6 +39,7 @@
     "typescript": "~4.7.4",
     "vite": "^3.0.4",
     "vitest": "^0.21.0",
+    "vue-eslint-parser": "^9.0.3",
     "vue-tsc": "^0.39.5"
   }
 }
