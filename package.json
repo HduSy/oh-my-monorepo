@@ -12,7 +12,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
     "format": "prettier --write 'packages/**/*.{js,ts}'",
-    "lint": "eslint '{packages,test}/**/*.{js,ts}' --fix"
+    "lint": "eslint '{packages,test}/**/*.{js,ts}' --fix",
+    "commit": "cz"
   },
   "husky": {
     "hooks": {
