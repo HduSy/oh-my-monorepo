@@ -6,4 +6,5 @@ const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
 
 module.exports = {
   resolveApp,
+  appDirectory,
 }
