@@ -1,11 +1,10 @@
-// @ts-ignore
-import { use } from 'react';
 import {
   fetchCategoryBySlug,
   PageProps,
   type Category,
 } from '@/lib/getCategories';
 import { SkeletonCard } from '@/ui/SkeletonCard';
+import { use } from 'react';
 
 const fetchCategory = async (
   categorySlug: string | undefined,

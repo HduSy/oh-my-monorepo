@@ -11,21 +11,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "format": "prettier --write 'packages/**/*.{js,ts}'",
-    "lint": "eslint '{packages,test}/**/*.{js,ts}' --fix",
+    "format": "prettier --write 'packages/**/*.{js,jsx,ts,tsx}'",
+    "lint": "eslint '{packages,test}/**/*.{js,jsx,ts,tsx}' --fix",
+    "lint:style": "stylelint '{packages}/**/*.{css,scss}' --fix",
     "commit": "cz"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "packages/**/*.{js,ts}": [
-      "npm run format",
-      "npm run lint"
-    ]
   },
   "config": {
     "commitizen": {
@@ -50,8 +39,12 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "postcss-scss": "^4.0.6",
     "prettier": "^2.7.1",
     "standard-version": "^9.5.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-standard": "^29.0.0",
     "typescript": "^4.7.4",
     "webpack": "^5.74.0"
   },
