@@ -1,4 +1,9 @@
 {
   "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
-  "customSyntax": "postcss-scss"
+  "customSyntax": "postcss-scss",
+  "rules": {
+    "selector-class-pattern": ".",
+    "keyframes-name-pattern": ".",
+    "block-no-empty": null
+  }
 }

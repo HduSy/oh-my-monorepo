@@ -32,7 +32,7 @@ module.exports = {
       webpackConfig.resolve = {
         ...webpackConfig.resolve,
 
-        extensions: ['.tsx', '.scss', '.js'],
+        extensions: ['.ts', '.tsx', '.scss', '.js'],
 
         fallback: {
           ...webpackConfig.resolve?.fallback,

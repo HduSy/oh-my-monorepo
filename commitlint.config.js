@@ -18,5 +18,7 @@ module.exports = {
         'ci',
       ],
     ],
+    'subject-empty': [0, 'always'],
+    'type-empty': [0, 'always'],
   },
 }

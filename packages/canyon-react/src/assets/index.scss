@@ -1,0 +1,23 @@
+:root {
+  --font-size: 16px;
+}
+
+.canyon-theme-light {
+  // text
+  --txt-color-1: rgb(129 60 133 / 100%);
+  --txt-color-2: rgb(129 60 133 / 80%);
+  --txt-color-3: rgb(129 60 133 / 60%);
+  --txt-color-4: rgb(129 60 133 / 40%);
+  --txt-color-5: rgb(129 60 133 / 20%);
+  --txt-color-6: rgb(129 60 133 / 10%);
+}
+
+.canyon-theme-dark {
+  // text
+  --txt-color-1: rgb(18 181 130 / 100%);
+  --txt-color-2: rgb(18 181 130 / 80%);
+  --txt-color-3: rgb(18 181 130 / 60%);
+  --txt-color-4: rgb(18 181 130 / 40%);
+  --txt-color-5: rgb(18 181 130 / 20%);
+  --txt-color-6: rgb(18 181 130 / 10%);
+}

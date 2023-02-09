@@ -14,7 +14,7 @@
     "noImplicitReturns": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["ES6"],
+    "lib": ["ES6","DOM"],
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
