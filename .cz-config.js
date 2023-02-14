@@ -46,6 +46,10 @@ module.exports = {
       value: ':package: build',
       name: '📦️ build|打包',
     },
+    {
+      value: 'learn',
+      name: '💩 learn|学习中',
+    },
   ],
   // 步骤
   messages: {
