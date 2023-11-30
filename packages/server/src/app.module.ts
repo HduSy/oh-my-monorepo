@@ -5,11 +5,14 @@ import { CatsController } from './cats/cats.controller'
 import { CatsModule } from './cats/cats.module'
 import { CatsService } from './cats/cats.service'
 import { LoggerMiddleware } from './logger.middleware'
+import { StudentsController } from './students/students.controller'
+import { StudentsModule } from './students/students.module'
+import { StudentsService } from './students/students.service'
 
 @Module({
-  imports: [CatsModule],
-  controllers: [AppController, CatsController],
-  providers: [AppService, CatsService],
+  imports: [CatsModule, StudentsModule],
+  controllers: [AppController, CatsController, StudentsController],
+  providers: [AppService, CatsService, StudentsService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
