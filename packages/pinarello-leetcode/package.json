@@ -1,5 +1,5 @@
 {
-  "name": "@st-monorepo/pinarello-leetcode",
+  "name": "@oh-my-monorepo/pinarello-leetcode",
   "version": "1.0.0",
   "description": "leetcode acs",
   "main": "index.js",

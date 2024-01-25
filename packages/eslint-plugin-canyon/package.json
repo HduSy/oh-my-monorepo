@@ -1,5 +1,5 @@
 {
-  "name": "@st-monorepo/eslint-plugin-canyon",
+  "name": "@oh-my-monorepo/eslint-plugin-canyon",
   "type": "commonjs",
   "version": "0.0.1",
   "description": "Collection of useful rules in every day work.",

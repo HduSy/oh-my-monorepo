@@ -1,5 +1,5 @@
 {
-  "name": "@st-monorepo/wilier-playground",
+  "name": "@oh-my-monorepo/wilier-playground",
   "version": "1.0.0",
   "description": "A pkg of playground for anything.",
   "main": "index.js",

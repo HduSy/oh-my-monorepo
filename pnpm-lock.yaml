@@ -293,7 +293,7 @@ importers:
 
   packages/trek-cli:
     specifiers:
-      '@st-monorepo/trek-cli': ^0.0.1
+      '@oh-my-monorepo/trek-cli': ^0.0.1
       '@types/adm-zip': ^0.5.0
       '@types/inquirer': ^8.2.1
       '@types/jsonfile': ^6.1.0
@@ -314,7 +314,7 @@ importers:
       superagent: ^8.0.0
       validate-npm-package-name: ^4.0.0
     dependencies:
-      '@st-monorepo/trek-cli': 'link:'
+      '@oh-my-monorepo/trek-cli': 'link:'
       '@types/adm-zip': 0.5.0
       '@types/inquirer': 8.2.2
       '@types/jsonfile': 6.1.0
