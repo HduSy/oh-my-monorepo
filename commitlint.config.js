@@ -16,7 +16,7 @@ module.exports = {
         'test',
         'build',
         'ci',
-        'lrn',
+        'learn',
       ],
     ],
     'subject-empty': [0, 'always'],
