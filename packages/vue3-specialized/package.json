@@ -1,5 +1,5 @@
 {
-  "name": "@oh-my-monorepo/specialized-vue3",
+  "name": "@oh-my-monorepo/vue3-specialized",
   "version": "0.0.0",
   "type": "commonjs",
   "scripts": {

@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "type": "commonjs",
   "description": "",
-  "author": "songyao",
+  "author": "HduSy",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",

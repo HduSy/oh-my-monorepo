@@ -62,7 +62,7 @@ importers:
       typescript: 4.7.4
       webpack: 5.74.0
 
-  packages/cannondale-nextjs:
+  packages/nextjs-cannondale:
     specifiers:
       '@types/node': 18.0.3
       '@types/react': 18.0.15
@@ -105,7 +105,7 @@ importers:
       tailwindcss: 3.1.8
       typescript: 4.7.4
 
-  packages/canyon-react:
+  packages/react-canyon:
     specifiers:
       '@craco/craco': ^7.0.0
       '@reduxjs/toolkit': ^1.9.3
@@ -165,7 +165,7 @@ importers:
       eslint-plugin-vue: 9.3.0_eslint@8.21.0
       mocha: 10.0.0
 
-  packages/pinarello-leetcode:
+  packages/nextjs-cannondale:
     specifiers:
       '@babel/core': ^7.19.3
       '@babel/preset-env': ^7.19.3
@@ -236,7 +236,7 @@ importers:
       typescript: 4.7.4
       webpack: 5.74.0
 
-  packages/specialized-vue3:
+  packages/vue3-specialized:
     specifiers:
       '@rushstack/eslint-patch': ^1.1.4
       '@types/jsdom': ^20.0.0
@@ -291,9 +291,9 @@ importers:
       vue-eslint-parser: 9.0.3_eslint@8.21.0
       vue-tsc: 0.39.5_typescript@4.7.4
 
-  packages/trek-cli:
+  packages/cli-trek:
     specifiers:
-      '@oh-my-monorepo/trek-cli': ^0.0.1
+      '@oh-my-monorepo/cli-trek': ^0.0.1
       '@types/adm-zip': ^0.5.0
       '@types/inquirer': ^8.2.1
       '@types/jsonfile': ^6.1.0
@@ -314,7 +314,7 @@ importers:
       superagent: ^8.0.0
       validate-npm-package-name: ^4.0.0
     dependencies:
-      '@oh-my-monorepo/trek-cli': 'link:'
+      '@oh-my-monorepo/cli-trek': 'link:'
       '@types/adm-zip': 0.5.0
       '@types/inquirer': 8.2.2
       '@types/jsonfile': 6.1.0

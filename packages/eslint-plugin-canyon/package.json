@@ -8,7 +8,7 @@
     "eslintplugin",
     "eslint-plugin"
   ],
-  "author": "songyao",
+  "author": "HduSy",
   "license": "MIT",
   "main": "./lib/index.js",
   "exports": "./lib/index.js",

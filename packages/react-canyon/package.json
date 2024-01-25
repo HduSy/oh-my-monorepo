@@ -1,5 +1,5 @@
 {
-  "name": "@oh-my-monorepo/canyon-react",
+  "name": "@oh-my-monorepo/react-canyon",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

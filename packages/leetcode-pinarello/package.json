@@ -1,5 +1,5 @@
 {
-  "name": "@oh-my-monorepo/pinarello-leetcode",
+  "name": "@oh-my-monorepo/nextjs-cannondale",
   "version": "1.0.0",
   "description": "leetcode acs",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "keywords": [],
-  "author": "songyao",
+  "author": "HduSy",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.19.3",
