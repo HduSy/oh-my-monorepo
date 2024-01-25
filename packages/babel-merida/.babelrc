@@ -1,0 +1,13 @@
+{
+  "presets": [["@babel/env", {
+    "useBuiltIns": "usage", // "entry", false
+    "corejs": 3, // 2
+    "modules": false // auto(default) amd umd commonjs false
+  }]], // 预设合集，语法转换
+  "plugins": [ ["@babel/plugin-transform-runtime", {
+    "helpers": true, // 开启自动导入
+    "corejs": 2, // 2
+    "useESModules": true, // 开启ES6模块语法
+    "absoluteRuntime": false // 模块路径引入规则
+  }] ]
+}
