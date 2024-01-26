@@ -47,7 +47,7 @@ module.exports = {
       name: '📦️ build|打包',
     },
     {
-      value: 'learn',
+      value: ':shit: learn',
       name: '💩 learn|学习中',
     },
   ],
