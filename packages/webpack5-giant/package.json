@@ -3,18 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "./src/index.js",
-  "sideEffects": false,
+  "sideEffects": [
+    "./src/**/*.css"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development webpack serve --open --config config/webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js"
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "clear": "rm -rf ./dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "HduSy",
   "license": "ISC",
   "devDependencies": {
-    "chalk": "^4.1.0",
     "cross-env": "^7.0.3",
+    "css-loader": "^6.9.1",
     "css-minimizer-webpack-plugin": "^4.2.0",
     "esbuild-loader": "^2.20.0",
     "html-webpack-plugin": "^5.5.0",
@@ -27,6 +30,7 @@
     "sass": "^1.55.0",
     "sass-loader": "^13.0.2",
     "speed-measure-webpack-plugin": "^1.5.0",
+    "style-loader": "^3.3.4",
     "thread-loader": "^3.0.4",
     "webpack": "^5.74.0",
     "webpack-bundle-analyzer": "^4.6.1",
