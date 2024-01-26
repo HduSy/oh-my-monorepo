@@ -1,5 +1,11 @@
+Created Date：2023-07-18 14:36:02  
+Last Modified：2023-07-18 14:36:01
 
-# Babel
+# Tags
+
+#babel #前端工程化 #工程化
+
+# Content
 
 ## 功能
 
@@ -23,11 +29,11 @@ pnpm babel ./src/index.js -o ./dist/output.js
 
 ### 构建工具里配置
 
-- `webpack`：`babel-loader`
-- `rollup`：`@rollup/plugin-babel`
-- `vite`：`@vitejs/plugin-legacy`
+`webpack`：`babel-loader` [[webpack#^a0a331]]  
+`rollup`：`@rollup/plugin-babel` [[Rollup#^f9ddaa]]  
+`vite`：`@vitejs/plugin-legacy` [[vite#^0efffb]]  
 
-无论使用哪种方式，`@babel/core`、`@babel/cli`、`@babel/preset-env`及其相应配置文件都是必须的
+无论使用哪种方式，`@babel/core`、`@babel/cli`、`@babel/preset-env` 及其相应配置文件都是必须的
 
 ## 使用指南
 
@@ -81,7 +87,7 @@ pnpm add @babel/runtime // for 生产环境
 
 ###### corejs 配置项
 
-`"corejs: false"`：开不开启，绝对对不对 `API` 进行转换，如：
+`"corejs: false"`：开不开启，绝定对不对 `API` 进行转换，如：
 
 ```js
 import "core-js/modules/es.promise.js"; // window.Promise被污染
@@ -164,6 +170,10 @@ import "core-js/modules/es.array.unscopables.flat.js";
 [图形化显示浏览器支持范围](https://browsersl.ist/)
 
 ##### useBuiltIns 选项
+
+```ad-danger
+When this plugin is enabled, the `useBuiltIns` option in `@babel/preset-env` must not be set. Otherwise, this plugin may not able to completely sandbox the environment.
+```
 
 ```json
 "entry": 须手动在主文件入口/构建工具入口处引入`@babel/polyfill`
@@ -277,6 +287,8 @@ We do not recommend that you import the whole polyfill directly, either try the�
 
 is a library that contains Babel modular runtime helpers.
 
+无需开启 `corejs2 API` 转换时，安装 `@babel/runtime` 即可；需要 `corejs3 API` 转换时需安装 `@babel/runtime-corejs2/3`
+
 ## 总结
 
 `Babel` 三大功能：
@@ -298,7 +310,6 @@ is a library that contains Babel modular runtime helpers.
 
 [Babel 教程 - 姜瑞涛的官方网站](https://www.jiangruitao.com/babel/) 🎉🎉🎉  
 [编译 ts 代码用 tsc 还是 babel？ - 掘金](https://juejin.cn/post/7084882650233569317)
-
 
 [Babel相关内容串联 | Congzhou's Blog](https://congzhou09.github.io/knowledge/Babel%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%E4%B8%B2%E8%81%94.html)  
 [前端工程化（7）：你所需要知道的最新的babel兼容性实现方案 - 掘金](https://juejin.cn/post/6976501655302832159)  
