@@ -1,20 +1,16 @@
 const glob = require('glob')
 const { merge } = require('webpack-merge')
-const { resolveApp, appDirectory } = require('./paths')
+const { appDirectory } = require('./paths')
 const common = require('./webpack.common')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const TerserPlugin = require('terser-webpack-plugin') // webpack5 自带，js 压缩
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin') // css 压缩
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin') // 压缩 CSS
 const MiniCssExtractPlugin = require('mini-css-extract-plugin') // 提取 js 文件中的 css
+const path = require('path')
 const PurgeCSSPlugin = require('purgecss-webpack-plugin').PurgeCSSPlugin // CSS Tree Shaking
+const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = merge(common, {
-  mode: 'production',
-  output: {
-    filename: '[name].[contenthash].bundle.js', // 清缓存，引入contenthash: 输出文件内容的 md4-hash（例如 [contenthash].js -> 4ea6ff1de66c537eb9b2.js）
-    path: resolveApp('dist'),
-    clean: true,
-  },
   plugins: [
     new BundleAnalyzerPlugin(),
     new MiniCssExtractPlugin({
@@ -24,8 +20,11 @@ module.exports = merge(common, {
     new PurgeCSSPlugin({
       paths: glob.sync(`${appDirectory}/**/*`, { nodir: true }),
     }),
+    // gzip 压缩
+    new CompressionPlugin(),
   ],
   optimization: {
+    minimize: true,
     runtimeChunk: true, // 为运行时代码创建一个额外的 chunk，减少 entry chunk 体积
     moduleIds: 'deterministic', // hash 不随依赖改变而改变
     minimizer: [
@@ -56,7 +55,7 @@ module.exports = merge(common, {
       }),
     ],
     splitChunks: {
-      chunks: 'all',
+      chunks: 'all', // 优化范围
       cacheGroups: {
         // 第三方模块
         vendors: {

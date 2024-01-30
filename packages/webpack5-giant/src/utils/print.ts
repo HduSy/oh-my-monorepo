@@ -1,0 +1,3 @@
+export default function print(str: string) {
+  console.log(str)
+}

@@ -1,9 +1,9 @@
 {
   "presets": [["@babel/preset-env", {
-    // "useBuiltIns": "usage", // "entry", false
+    "useBuiltIns": "usage", // "entry", false
     // "corejs": 2, // 2
     // "modules": false // auto(default) amd umd commonjs false
-  }]], // 预设合集，语法转换
+  }], "@babel/preset-typescript"], // 预设合集，语法转换
   "plugins": [ ["@babel/plugin-transform-runtime", {
     "helpers": true, // 开启自动导入
     "corejs": 3, // 2

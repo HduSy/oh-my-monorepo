@@ -1,0 +1,14 @@
+.hello {
+  color: blue;
+  width: 111px;
+  height: 111px;
+  background: url(../assets/IMG_1487.jpg) center/contain no-repeat;
+}
+
+::placeholder {
+  color: red;
+}
+
+.ttt {
+
+}
