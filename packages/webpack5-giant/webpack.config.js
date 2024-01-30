@@ -6,6 +6,7 @@ const PurgeCSSPlugin = require('purgecss-webpack-plugin').PurgeCSSPlugin
 const path = require('path')
 const glob = require('glob')
 const { appDirectory } = require('./config/paths')
+
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
@@ -17,7 +18,7 @@ module.exports = {
     clean: true,
   },
   resolve: {
-    // extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.js'],
   },
   module: {
     rules: [
@@ -63,12 +64,7 @@ module.exports = {
       },
       {
         test: /\.[jt]s$/i,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            cacheDirectory: true, // 缓存
-          },
-        },
+        use: 'babel-loader',
         exclude: /node_modules/,
       },
       // typescript + babel-loader + @babel/preset-typescript > typescript + ts-loader

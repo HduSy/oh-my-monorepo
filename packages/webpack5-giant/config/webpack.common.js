@@ -21,7 +21,7 @@ module.exports = {
     pathinfo: false, // 去掉路径信息
     // 不引入contenthash:提升本地开发构建效率
     // 引入contenthash:清缓存，输出文件内容的 md4-hash（例如 [contenthash].js -> 4ea6ff1de66c537eb9b2.js）
-    filename: isEnvProduction ? '[name].[contenthash].bundle.js' : '[name].bundle.js',
+    filename: isEnvProduction ? '[name]-[contenthash:8].bundle.js' : '[name].bundle.js',
     chunkFilename: 'async-[hash:8]-chunk.js', // 非入口模块chunk名
     // 编译前清除目录
     clean: true, // 就不需要clean-webpack-plugin插件了
@@ -32,8 +32,7 @@ module.exports = {
       '@': appDirectory, // 路径别名
     },
     extensions: ['.tsx', '.ts', '.js'], // 配置需解析的文件类型列表
-    modules: [path.resolve(__dirname, 'node_modules'), appDirectory], // 缩小解析范围、提供精确定位都能提升构建速度
-    symlinks: false, // 不需要软链的话
+    // symlinks: false, // 🚨罪魁祸首
   },
   module: {
     rules: [
@@ -87,17 +86,22 @@ module.exports = {
         ],
       },
       {
-        test: /\.(js|ts|jsx|tsx)$/,
-        use: [
-          {
-            loader: 'esbuild-loader',
-            options: {
-              loader: 'tsx',
-              target: 'es2015',
-            },
-          },
-        ],
+        test: /\.[jt]s$/i,
+        use: 'babel-loader',
+        exclude: /node_modules/,
       },
+      // {
+      //   test: /\.(js|ts|jsx|tsx)$/,
+      //   use: [
+      //     {
+      //       loader: 'esbuild-loader',
+      //       options: {
+      //         loader: 'tsx',
+      //         target: 'es2015',
+      //       },
+      //     },
+      //   ],
+      // },
       {
         test: /\.txt$/i,
         use: 'raw-loader',

@@ -18,7 +18,6 @@
     "@babel/preset-env": "^7.19.3"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
     "@babel/runtime": "^7.23.8"
   }
 }

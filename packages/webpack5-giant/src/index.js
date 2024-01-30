@@ -1,7 +1,11 @@
 import './css/test.css'
 import './css/test.scss'
-// import { print } from './utils'
-// print('print')
+
+import { print, sleep } from './utils'
+
+sleep(2 * 1000).then(() => {
+  print('print')
+})
 
 import IMG from './assets/IMG_1487.jpg'
 
